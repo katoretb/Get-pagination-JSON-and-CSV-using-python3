@@ -14,6 +14,9 @@ if(endat == 0):
     lastpageurl = response.json()['links']['last']
     lastpagenum = lastpageurl.split("=")[1]
     endat = lastpagenum
+    
+if(endat > lastpagenum):
+    endat = lastpagenum
 
 #for i in range(1, int(lastpagenum)+1):
 for i in range(startat, endat+1):
