@@ -13,6 +13,7 @@ if(endat == 0):
     response = requests.get(url + "1") 
     lastpageurl = response.json()['links']['last']
     lastpagenum = lastpageurl.split("=")[1]
+    lastpagenum int(lastpagenum)
     endat = lastpagenum
     
 if(endat > lastpagenum):
